@@ -10,8 +10,8 @@ steps:
 uses: actions/setup-java@v4
 with:
   distribution: 'zulu' 
-   java-version: '17'
--name: Setup Node.js
+  java-version: '17'
+  -name: concurrency: Setup Node.js
 uses: actions/setup-node@v4
 with:
 node-version:'18'- name: Install dependencies
@@ -21,4 +21,4 @@ run: cd android chmod +x gradlew
 uses: actions/upload-artifact@v4
 with:
 name: Kyrgyzstan-VIP-Launcher
-path: android/app/build/outputs/apk/release/*.apk
+path: android/app/build/outputs/apk/release
