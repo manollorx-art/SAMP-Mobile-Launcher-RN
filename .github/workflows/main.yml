@@ -4,14 +4,14 @@ jobs:
 build:
 runs-on: ubuntu-latest
 steps:
-- name: Checkout repository
-  uses: actions/checkout@v4
-- name: Set up JDK 17
+-name: Checkout repository
+uses: actions/checkout@v4
+-name: Set up JDK 17
 uses: actions/setup-java@v4
 with:
   distribution: 'zulu' 
   java-version: '17'
-  -name: concurrency: Setup Node.js
+-name: concurrency: Setup Node.js
 uses: actions/setup-node@v4
 with:
 node-version:'18'- name: Install dependencies
