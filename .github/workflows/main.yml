@@ -10,14 +10,11 @@ steps:
 uses: actions/setup-java@v4
 with:
 distribution: 'zulu'
-java-version: '17'
-- name: Setup Node.js
+java-version: '17'- name: Setup Node.js
 uses: actions/setup-node@v4
 with:
-node-version: '18'
-- name: Install dependencies
-run: npm install --legacy-peer-deps
-- name: Build Android APK
+node-version: '18'- name: Install dependencies
+run: npm install --legacy-peer-deps- name: Build Android APK
 run: |
 cd android
 chmod +x gradlew
